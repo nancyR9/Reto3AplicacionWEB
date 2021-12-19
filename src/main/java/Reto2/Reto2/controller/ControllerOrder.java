@@ -56,7 +56,7 @@ public class ControllerOrder {
     
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int id) {
+    public boolean delete(@PathVariable("id") Integer id) {
         return orderService.delete(id);
     }
     

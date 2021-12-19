@@ -37,7 +37,7 @@ public class ControllerCleaningProduct {
     }
     
     @GetMapping("/{id}")
-    public Optional <CleaningProduct> getCleanProd(@PathVariable("id") int id){
+    public Optional <CleaningProduct> getCleanProd(@PathVariable("id") Integer id){
         return cleanProdService.getCleanProd(id);
     }
     
@@ -49,13 +49,13 @@ public class ControllerCleaningProduct {
     
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public CleaningProduct update(@RequestBody CleaningProduct gadget) {
-        return cleanProdService.update(gadget);
+    public CleaningProduct update(@RequestBody CleaningProduct cleanProd) {
+        return cleanProdService.update(cleanProd);
     }
     
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public Boolean delate(@PathVariable("id") int cleanProd) {
+    public Boolean delate(@PathVariable("id") Integer cleanProd) {
         return cleanProdService.delete(cleanProd);
     }
    
